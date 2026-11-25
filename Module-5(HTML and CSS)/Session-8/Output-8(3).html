@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://127.0.0.1:5500/index8(3).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f1f3f6;
+        }
+
+        .product-section {
+            padding: 40px 20px;
+        }
+
+        .product-section h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .product-card {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            flex: 1;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 220px;
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: green;
+            font-weight: bold;
+        }
+
+        .discount {
+            font-size: 16px;
+            color: #fb641b;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #fb641b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 1200px) {
+
+            .product-card {
+                padding: 20px;
+            }
+
+            .product-details h2 {
+                font-size: 22px;
+            }
+
+            .description {
+                font-size: 15px;
+            }
+
+        }
+
+        @media only screen and (max-width: 900px) {
+
+            .product-card {
+                padding: 18px;
+                gap: 15px;
+            }
+
+            .product-details h2 {
+                font-size: 20px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+
+            .price {
+                font-size: 21px;
+            }
+
+        }
+
+        @media only screen and (max-width: 600px) {
+
+            .product-card {
+                flex-direction: column;
+                padding: 15px;
+                text-align: center;
+            }
+
+            .product-image img {
+                height: 180px;
+            }
+
+            .product-details h2 {
+                font-size: 18px;
+            }
+
+            .description {
+                font-size: 13px;
+            }
+
+            .price {
+                font-size: 20px;
+            }
+
+            .discount {
+                font-size: 14px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="product-section">
+        <h1>Best Deals For You</h1>
+        <div class="product-card">
+            <div class="product-image">
+                <img src="./Output-8(3)_files/Mobile.webp" alt="Smartphone">
+            </div>
+            <div class="product-details">
+                <h2>Samsung Galaxy Smartphone</h2>
+                <p class="description">
+                    8GB RAM, 128GB Storage, 5000mAh Battery
+                </p>
+                <p class="price">₹14,999</p>
+                <p class="discount">20% Off</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </section>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
